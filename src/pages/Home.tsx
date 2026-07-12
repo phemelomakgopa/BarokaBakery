@@ -10,9 +10,8 @@ import {
   CalendarDays,
   Star,
   ArrowRight,
-  Quote,
 } from 'lucide-react';
-import { cakes, testimonials } from '../data/cakes';
+import { cakes } from '../data/cakes';
 
 const WHATSAPP_URL = 'https://wa.me/27799979469?text=Hi%20Baroka%27s%20Bakery!%20I%27d%20love%20to%20order%20a%20cake.';
 
@@ -235,51 +234,6 @@ export default function Home() {
                     <ArrowRight className="h-6 w-6 text-brand-pink-soft" />
                   </div>
                 )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="relative py-20">
-        <div className="container-warm">
-          <div className="mx-auto mb-12 max-w-2xl text-center">
-            <p className="section-eyebrow">Happy Parents</p>
-            <h2 className="section-title">Loved by families</h2>
-            <p className="mt-4 text-brand-dark/60">
-              Don't just take my word for it — hear from the families who've
-              celebrated with Baroka's Bakery.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <div
-                key={t.id}
-                className="relative rounded-3xl bg-white p-7 shadow-warm transition-all duration-500 hover:-translate-y-1 hover:shadow-soft-pink"
-              >
-                <Quote className="absolute right-5 top-5 h-10 w-10 text-brand-pink-soft/30" />
-
-                <div className="flex gap-1">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-
-                <p className="mt-4 text-sm leading-relaxed text-brand-dark/70">
-                  "{t.text}"
-                </p>
-
-                <div className="mt-5 flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-cream font-display text-lg text-brand-pink">
-                    {t.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-brand-dark">{t.name}</div>
-                    <div className="text-xs text-brand-dark/50">{t.location}</div>
-                  </div>
-                </div>
               </div>
             ))}
           </div>
