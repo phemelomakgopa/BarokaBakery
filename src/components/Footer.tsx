@@ -69,7 +69,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-white/70">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand-pink-soft" />
-                <span>Polokwane, South Africa</span>
+                <span>Burgersfort, Limpopo</span>
               </li>
               <li className="flex items-start gap-2">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-brand-pink-soft" />

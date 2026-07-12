@@ -315,7 +315,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider text-brand-dark/50">Location</p>
-                      <p className="text-sm font-medium text-brand-dark">Burgersfort, Limpopo, South Africa</p>
+                      <p className="text-sm font-medium text-brand-dark">Burgersfort, Limpopo</p>
                       <p className="text-xs text-brand-dark/50">Delivery available across Limpopo</p>
                     </div>
                   </div>
@@ -386,7 +386,7 @@ export default function Contact() {
             </p>
             <div className="mx-auto mt-6 flex max-w-md items-center justify-center gap-2 rounded-2xl bg-white p-4 shadow-warm">
               <MapPin className="h-5 w-5 text-brand-pink" />
-              <span className="text-sm font-medium text-brand-dark">Burgersfort, Limpopo, South Africa</span>
+              <span className="text-sm font-medium text-brand-dark">Burgersfort, Limpopo</span>
             </div>
           </div>
         </div>
