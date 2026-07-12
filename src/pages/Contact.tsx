@@ -1,8 +1,6 @@
 import { useState, FormEvent } from 'react';
 import {
-  MessageCircle,
-  Instagram,
-  Music2,
+  Facebook,
   MapPin,
   Clock,
   Send,
@@ -13,9 +11,10 @@ import {
   Mail,
 } from 'lucide-react';
 import { supabase } from '../lib/supabase';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 
 const WHATSAPP_URL = 'https://wa.me/27799979469?text=Hi%20Baroka%27s%20Bakery!%20I%27d%20love%20to%20order%20a%20cake.';
-const INSTAGRAM_URL = 'https://instagram.com/barokasbakery';
+const FACEBOOK_URL = 'https://web.facebook.com/profile.php?id=61591181746141';
 const TIKTOK_URL = 'https://tiktok.com/@barokasbakery';
 
 const cakeTypes = [
@@ -232,7 +231,7 @@ export default function Contact() {
               <div className="rounded-3xl bg-[#25D366] p-6 text-white shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/20">
-                    <MessageCircle className="h-6 w-6" />
+                    <WhatsAppIcon className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="font-rounded text-lg font-bold">Chat on WhatsApp</h3>
@@ -245,8 +244,15 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-white px-5 py-3 font-semibold text-[#25D366] transition-transform hover:scale-105"
                 >
-                  <MessageCircle className="h-5 w-5" />
+                  <WhatsAppIcon className="h-5 w-5" />
                   Start chatting
+                </a>
+                <a
+                  href="tel:0712751229"
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-5 py-3 font-semibold text-white transition-transform hover:scale-105"
+                >
+                  <Phone className="h-5 w-5" />
+                  Call 071 275 1229
                 </a>
               </div>
 
@@ -254,34 +260,67 @@ export default function Contact() {
               <div className="rounded-3xl bg-white p-6 shadow-warm">
                 <h3 className="font-rounded text-lg font-bold text-brand-dark">Contact Details</h3>
                 <div className="mt-4 space-y-4">
+
+                  {/* Phone / Call */}
                   <div className="flex items-start gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-cream text-brand-pink">
                       <Phone className="h-5 w-5" />
                     </div>
                     <div>
-                      <p className="text-xs font-semibold uppercase tracking-wider text-brand-dark/50">Phone / WhatsApp</p>
-                      <p className="text-sm font-medium text-brand-dark">+27 79 997 9469</p>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-brand-dark/50">Calls</p>
+                      <a href="tel:0712751229" className="text-sm font-medium text-brand-dark hover:text-brand-pink transition-colors">
+                        071 275 1229
+                      </a>
                     </div>
                   </div>
+
+                  {/* WhatsApp */}
+                  <div className="flex items-start gap-3">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#E8F8EF] text-[#25D366]">
+                      <WhatsAppIcon className="h-5 w-5" />
+                    </div>
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-wider text-brand-dark/50">WhatsApp</p>
+                        
+                          <a href="https://wa.me/27799979469"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-sm font-medium text-brand-dark hover:text-[#25D366] transition-colors"
+                        
+                        >  +27 79 997 9469
+                        </a>
+                      </div>
+                  </div>
+
+                  {/* Email */}
                   <div className="flex items-start gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-cream text-brand-pink">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider text-brand-dark/50">Email</p>
-                      <p className="text-sm font-medium text-brand-dark">barokasbakery@gmail.com</p>
+                      
+                        <a href="mailto:barokasbakery@gmail.com"
+                        className="text-sm font-medium text-brand-dark hover:text-brand-pink transition-colors"
+                      >
+                        barokasbakery@gmail.com
+                      </a>
                     </div>
                   </div>
+
+                  {/* Location */}
                   <div className="flex items-start gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-cream text-brand-pink">
                       <MapPin className="h-5 w-5" />
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-wider text-brand-dark/50">Location</p>
-                      <p className="text-sm font-medium text-brand-dark">Polokwane, South Africa</p>
+                      <p className="text-sm font-medium text-brand-dark">Burgersfort, Limpopo, South Africa</p>
                       <p className="text-xs text-brand-dark/50">Delivery available across Limpopo</p>
                     </div>
                   </div>
+
+                  {/* Operating Hours */}
                   <div className="flex items-start gap-3">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-cream text-brand-pink">
                       <Clock className="h-5 w-5" />
@@ -295,6 +334,7 @@ export default function Contact() {
                       </div>
                     </div>
                   </div>
+
                 </div>
               </div>
 
@@ -306,13 +346,13 @@ export default function Contact() {
                 </p>
                 <div className="mt-4 flex gap-3">
                   <a
-                    href={INSTAGRAM_URL}
+                    href={FACEBOOK_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#962fbf] text-white transition-transform hover:scale-110"
-                    aria-label="Instagram"
+                    className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1877F2] text-white transition-transform hover:scale-110"
+                    aria-label="Facebook"
                   >
-                    <Instagram className="h-5 w-5" />
+                    <Facebook className="h-5 w-5" />
                   </a>
                   <a
                     href={TIKTOK_URL}
@@ -321,7 +361,9 @@ export default function Contact() {
                     className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-dark text-white transition-transform hover:scale-110"
                     aria-label="TikTok"
                   >
-                    <Music2 className="h-5 w-5" />
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/>
+                    </svg>
                   </a>
                 </div>
               </div>
@@ -336,15 +378,15 @@ export default function Contact() {
           <div className="relative overflow-hidden rounded-3xl bg-brand-cream-deep p-8 text-center shadow-warm sm:p-12">
             <Heart className="mx-auto h-10 w-10 fill-brand-pink text-brand-pink animate-gentle-bounce" />
             <h2 className="mt-3 font-display text-2xl text-brand-dark sm:text-3xl">
-              Find me in Polokwane
+              Find me in Burgersfort
             </h2>
             <p className="mx-auto mt-2 max-w-md text-brand-dark/60">
-              I'm based in Polokwane and deliver across Limpopo. Exact
+              I'm based in Burgersfort and deliver across Limpopo. Exact
               address shared upon order confirmation.
             </p>
             <div className="mx-auto mt-6 flex max-w-md items-center justify-center gap-2 rounded-2xl bg-white p-4 shadow-warm">
               <MapPin className="h-5 w-5 text-brand-pink" />
-              <span className="text-sm font-medium text-brand-dark">Polokwane, Limpopo, South Africa</span>
+              <span className="text-sm font-medium text-brand-dark">Burgersfort, Limpopo, South Africa</span>
             </div>
           </div>
         </div>

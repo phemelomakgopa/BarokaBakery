@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Logo from './Logo';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -66,7 +67,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary ml-3 py-2.5 text-sm"
           >
-            <MessageCircle className="h-4 w-4" />
+            <WhatsAppIcon className="h-4 w-4" />
             Order on WhatsApp
           </a>
         </div>
@@ -110,7 +111,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="btn-primary mt-2"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
             Order on WhatsApp
           </a>
         </div>

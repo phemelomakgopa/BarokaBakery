@@ -7,9 +7,9 @@ import {
   Leaf,
   Award,
   ArrowRight,
-  MessageCircle,
   Star,
 } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 
 const WHATSAPP_URL = 'https://wa.me/27799979469?text=Hi%20Baroka%27s%20Bakery!%20I%27d%20love%20to%20order%20a%20cake.';
 
@@ -99,7 +99,7 @@ export default function About() {
               </p>
               <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  <MessageCircle className="h-5 w-5" />
+                  <WhatsAppIcon className="h-5 w-5" />
                   Let's Bake Together
                 </a>
                 <Link to="/gallery" className="btn-secondary">
@@ -232,7 +232,7 @@ export default function About() {
                 hear your idea.
               </p>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary mt-6">
-                <MessageCircle className="h-5 w-5" />
+                <WhatsAppIcon className="h-5 w-5" />
                 Start Your Order
               </a>
             </div>

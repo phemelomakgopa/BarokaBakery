@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import heroImage from '../data/Assets/CakeImage_vii.webp';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import {
-  MessageCircle,
   Heart,
   Sparkles,
   Cake,
@@ -18,7 +18,7 @@ const WHATSAPP_URL = 'https://wa.me/27799979469?text=Hi%20Baroka%27s%20Bakery!%2
 
 const steps = [
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     title: 'Reach Out',
     description: 'Send me a message on WhatsApp with your cake idea, date, and theme.',
   },
@@ -82,7 +82,7 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start animate-fade-in-up animation-delay-300">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary w-full sm:w-auto">
-                  <MessageCircle className="h-5 w-5" />
+                  <WhatsAppIcon className="h-5 w-5" />
                   Order on WhatsApp
                 </a>
                 <Link to="/gallery" className="btn-secondary w-full sm:w-auto">
@@ -311,7 +311,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-4 font-semibold text-brand-pink shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
                 >
-                  <MessageCircle className="h-5 w-5" />
+                  <WhatsAppIcon className="h-5 w-5" />
                   Chat on WhatsApp
                 </a>
                 <Link

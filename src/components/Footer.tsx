@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Music2, MessageCircle, MapPin, Clock } from 'lucide-react';
+import { Facebook, Music2, MapPin, Clock } from 'lucide-react';
 import Logo from './Logo';
+import WhatsAppIcon from './WhatsAppIcon';
 
 const WHATSAPP_URL = 'https://wa.me/27799979469?text=Hi%20Baroka%27s%20Bakery!%20I%27d%20love%20to%20order%20a%20cake.';
-const INSTAGRAM_URL = 'https://instagram.com/barokasbakery';
+const FACEBOOK_URL = 'https://web.facebook.com/profile.php?id=61591181746141';
 const TIKTOK_URL = 'https://tiktok.com/@barokasbakery';
 
 export default function Footer() {
@@ -94,25 +95,28 @@ export default function Footer() {
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] transition-transform hover:scale-110"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="h-5 w-5 text-white" />
+                <WhatsAppIcon className="h-5 w-5 text-white" />
               </a>
               <a
-                href={INSTAGRAM_URL}
+                href={FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#962fbf] transition-transform hover:scale-110"
-                aria-label="Instagram"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1877F2] transition-transform hover:scale-110"
+                aria-label="Facebook"
               >
-                <Instagram className="h-5 w-5 text-white" />
+                <Facebook className="h-5 w-5 text-white" />
               </a>
               <a
-                href={TIKTOK_URL}
+               href={TIKTOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-white transition-transform hover:scale-110"
+                className="flex h-12 w-12 items-center justify-center rounded-2xl transition-transform hover:scale-110"
+                style={{ background: "#000000" }}
                 aria-label="TikTok"
               >
-                <Music2 className="h-5 w-5 text-brand-dark" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="white">
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.02-.07z"/>
+                </svg>
               </a>
             </div>
             <a
@@ -121,7 +125,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn-primary mt-5 w-full text-sm"
             >
-              <MessageCircle className="h-4 w-4" />
+              <WhatsAppIcon className="h-4 w-4" />
               Chat on WhatsApp
             </a>
           </div>

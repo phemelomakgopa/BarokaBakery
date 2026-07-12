@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Heart, ArrowRight, Filter } from 'lucide-react';
+import { Heart, ArrowRight, Filter } from 'lucide-react';
 import { cakes, cakeCategories } from '../data/cakes';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 
 const WHATSAPP_URL = 'https://wa.me/27799979469?text=Hi%20Baroka%27s%20Bakery!%20I%27d%20love%20to%20order%20a%20cake.';
 
@@ -88,7 +89,7 @@ export default function Gallery() {
                       rel="noopener noreferrer"
                       className="mt-3 inline-flex items-center gap-1.5 rounded-full bg-white px-4 py-2 text-xs font-semibold text-brand-pink transition-colors hover:bg-brand-cream"
                     >
-                      <MessageCircle className="h-3.5 w-3.5" />
+                      <WhatsAppIcon className="h-3.5 w-3.5" />
                       Order similar
                     </a>
                   </div>
@@ -140,7 +141,7 @@ export default function Gallery() {
               </p>
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  <MessageCircle className="h-5 w-5" />
+                  <WhatsAppIcon className="h-5 w-5" />
                   Chat on WhatsApp
                 </a>
                 <Link to="/contact" className="btn-secondary">
