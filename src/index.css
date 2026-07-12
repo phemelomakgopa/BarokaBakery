@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-cream text-brand-dark font-body antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-rounded font-bold tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-brand-pink text-white;
+  }
+}
+
+@layer components {
+  .container-warm {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand-pink px-7 py-3.5 font-semibold text-white shadow-soft-pink transition-all duration-300 hover:bg-brand-dark hover:shadow-soft-pink-lg hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-brand-pink bg-white px-7 py-3.5 font-semibold text-brand-pink transition-all duration-300 hover:bg-brand-pink hover:text-white hover:-translate-y-0.5;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-3.5 font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#1da851] hover:-translate-y-0.5;
+  }
+
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl lg:text-5xl text-brand-dark;
+  }
+
+  .section-eyebrow {
+    @apply font-script text-2xl text-brand-pink mb-2;
+  }
+
+  .card-warm {
+    @apply rounded-3xl bg-white shadow-warm transition-all duration-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+  .animation-delay-700 { animation-delay: 700ms; }
+  .animation-delay-1000 { animation-delay: 1000ms; }
+
+  .opacity-0-initial {
+    opacity: 0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF0F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #F48FB1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E91E8C;
+}
